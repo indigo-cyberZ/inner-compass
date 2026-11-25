@@ -28,7 +28,8 @@ export const EXERCISES: ExerciseMeta[] = [
     blurb:
       "Explore what genuinely matters to you through meaningful moments, not a checklist.",
     minutes: "10 min",
-    available: false,
+    available: true,
+    href: "/explore/values",
   },
   {
     slug: "boundaries",
