@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Warm, calming palette — values are "R G B" for Tailwind alpha support */
+  --sand: 244 238 228;
+  --cream: 252 249 243;
+  --clay: 199 122 90; /* primary: warm terracotta */
+  --clay-soft: 232 196 178;
+  --sage: 142 160 138; /* muted green accent */
+  --dusk: 124 141 166; /* dusty blue accent */
+  --ink: 46 42 38; /* near-black warm text */
+  --ink-soft: 104 97 88;
+  --surface: 255 255 255;
+  --surface-2: 249 244 236;
+  --line: 229 221 210;
+}
+
+:root[data-theme="dark"] {
+  --sand: 32 30 28;
+  --cream: 26 24 22;
+  --clay: 214 143 112;
+  --clay-soft: 92 64 50;
+  --sage: 150 168 146;
+  --dusk: 150 166 190;
+  --ink: 240 235 228;
+  --ink-soft: 184 176 165;
+  --surface: 40 37 34;
+  --surface-2: 48 44 40;
+  --line: 64 59 54;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sand: 32 30 28;
+    --cream: 26 24 22;
+    --clay: 214 143 112;
+    --clay-soft: 92 64 50;
+    --sage: 150 168 146;
+    --dusk: 150 166 190;
+    --ink: 240 235 228;
+    --ink-soft: 184 176 165;
+    --surface: 40 37 34;
+    --surface-2: 48 44 40;
+    --line: 64 59 54;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: rgb(var(--cream));
+  color: rgb(var(--ink));
+  font-feature-settings: "kern";
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus styles — visible, accessible */
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid rgb(var(--clay));
+  outline-offset: 2px;
+  border-radius: 6px;
+}
