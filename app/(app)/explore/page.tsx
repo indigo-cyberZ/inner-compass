@@ -49,6 +49,22 @@ export default async function ExplorePage() {
         </div>
       </Link>
 
+      <Link
+        href="/experiments"
+        className="block rounded-2xl border border-line bg-surface p-5 shadow-sm transition hover:border-clay-soft"
+      >
+        <div className="flex items-center justify-between gap-3">
+          <div>
+            <h2 className="font-semibold text-ink">🌱 Small experiments</h2>
+            <p className="mt-1 text-sm text-ink-soft">
+              Try one small thing in real life, then reflect on how it went — no
+              streaks, no grading.
+            </p>
+          </div>
+          <span className="shrink-0 text-sm font-medium text-clay">Open →</span>
+        </div>
+      </Link>
+
       <ul className="space-y-3">
         {visible.map((e) => {
           const card = (
