@@ -1,7 +1,28 @@
 import Link from "next/link";
+import { createClient } from "@/lib/supabase/server";
 import { EXERCISES } from "@/lib/exercises";
 
-export default function ExplorePage() {
+export const dynamic = "force-dynamic";
+
+function isFaith(category: string) {
+  return category.toLowerCase().startsWith("faith");
+}
+
+export default async function ExplorePage() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  const { data: profile } = await supabase
+    .from("ic_profiles")
+    .select("faith_enabled")
+    .eq("id", user?.id ?? "")
+    .maybeSingle();
+
+  const faithOn = profile?.faith_enabled ?? false;
+  const visible = EXERCISES.filter((e) => faithOn || !isFaith(e.category));
+  const hasHiddenFaith = !faithOn && EXERCISES.some((e) => isFaith(e.category));
+
   return (
     <div className="mx-auto max-w-2xl space-y-6">
       <div>
@@ -13,7 +34,7 @@ export default function ExplorePage() {
       </div>
 
       <ul className="space-y-3">
-        {EXERCISES.map((e) => {
+        {visible.map((e) => {
           const card = (
             <div
               className={`rounded-2xl border p-5 shadow-sm transition ${
@@ -53,6 +74,16 @@ export default function ExplorePage() {
           );
         })}
       </ul>
+
+      {hasHiddenFaith ? (
+        <p className="rounded-2xl border border-dashed border-line p-4 text-center text-sm text-ink-soft">
+          Optional faith-centered reflections are available too.{" "}
+          <Link href="/account" className="text-dusk hover:underline">
+            Turn on Faith &amp; spiritual growth
+          </Link>{" "}
+          in settings.
+        </p>
+      ) : null}
     </div>
   );
 }

@@ -56,9 +56,10 @@ export const EXERCISES: ExerciseMeta[] = [
     title: "Divine identity reflection",
     category: "Faith (optional)",
     blurb:
-      "A faith-centered reflection on worth and identity, grounded in verified Church teachings.",
+      "A faith-centered reflection on worth, agency, and growth. Optional; off by default.",
     minutes: "5 min",
-    available: false,
+    available: true,
+    href: "/explore/divine-identity",
   },
 ];
 
