@@ -33,7 +33,15 @@ export default async function AppLayout({
           <span className="text-sm text-ink-soft">
             {name ? `Hi, ${name}` : "Welcome"}
           </span>
-          <SignOutButton />
+          <div className="flex items-center gap-1">
+            <a
+              href="/account"
+              className="rounded-xl px-3 py-1.5 text-sm text-ink-soft transition hover:bg-surface-2 hover:text-ink"
+            >
+              Privacy &amp; data
+            </a>
+            <SignOutButton />
+          </div>
         </header>
         <main className="flex-1 px-4 py-6">{children}</main>
         <BottomNav />
