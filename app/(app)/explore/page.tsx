@@ -65,6 +65,22 @@ export default async function ExplorePage() {
         </div>
       </Link>
 
+      <Link
+        href="/meditate"
+        className="block rounded-2xl border border-line bg-surface p-5 shadow-sm transition hover:border-clay-soft"
+      >
+        <div className="flex items-center justify-between gap-3">
+          <div>
+            <h2 className="font-semibold text-ink">🧘 Meditation &amp; mindfulness</h2>
+            <p className="mt-1 text-sm text-ink-soft">
+              Guided breathing, 5-4-3-2-1 grounding, and a body scan — short and
+              calming.
+            </p>
+          </div>
+          <span className="shrink-0 text-sm font-medium text-clay">Open →</span>
+        </div>
+      </Link>
+
       <ul className="space-y-3">
         {visible.map((e) => {
           const card = (
