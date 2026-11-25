@@ -12,6 +12,16 @@ export type ExerciseMeta = {
 // shown as upcoming so the shape of the section is clear without over-promising.
 export const EXERCISES: ExerciseMeta[] = [
   {
+    slug: "discover-who-i-am",
+    title: "Discover who I am",
+    category: "Self-discovery",
+    blurb:
+      "A gentle, one-question-at-a-time look at your identity beneath your roles. Feeds your Discovery Map.",
+    minutes: "10–15 min",
+    available: true,
+    href: "/explore/discover-who-i-am",
+  },
+  {
     slug: "thought-record",
     title: "Thought record",
     category: "CBT",

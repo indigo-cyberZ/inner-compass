@@ -33,6 +33,22 @@ export default async function ExplorePage() {
         </p>
       </div>
 
+      <Link
+        href="/discovery"
+        className="block rounded-2xl border border-clay-soft bg-clay/5 p-5 transition hover:border-clay"
+      >
+        <div className="flex items-center justify-between gap-3">
+          <div>
+            <h2 className="font-semibold text-ink">🗺️ Your Discovery Map</h2>
+            <p className="mt-1 text-sm text-ink-soft">
+              A living picture of what you&apos;ve learned about yourself — values,
+              needs, strengths, questions you&apos;re still exploring.
+            </p>
+          </div>
+          <span className="shrink-0 text-sm font-medium text-clay">Open →</span>
+        </div>
+      </Link>
+
       <ul className="space-y-3">
         {visible.map((e) => {
           const card = (
