@@ -48,7 +48,8 @@ export const EXERCISES: ExerciseMeta[] = [
     blurb:
       "A short practice for meeting a hard moment with the kindness you'd offer a friend.",
     minutes: "3 min",
-    available: false,
+    available: true,
+    href: "/explore/self-compassion",
   },
   {
     slug: "divine-identity",
