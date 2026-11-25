@@ -38,7 +38,8 @@ export const EXERCISES: ExerciseMeta[] = [
     blurb:
       "Work through a situation to understand your needs and how you might honor them.",
     minutes: "10 min",
-    available: false,
+    available: true,
+    href: "/explore/boundaries",
   },
   {
     slug: "self-compassion",
