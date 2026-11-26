@@ -40,8 +40,7 @@ export default function MeditatePage() {
         treatment or cure for any medical or mental-health condition. Some
         techniques suit some people more than others — if breathing exercises
         feel uncomfortable, the eyes-open grounding practice is a gentle
-        alternative. If you&apos;re in crisis, please reach out to a professional
-        or a crisis line.
+        alternative.
       </p>
     </div>
   );

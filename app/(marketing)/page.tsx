@@ -28,13 +28,6 @@ export default function LandingPage() {
           Inner Compass is in private development. New accounts are invite-only.
         </p>
       </div>
-
-      <footer className="mt-16 text-xs text-ink-soft">
-        <p>
-          A personal reflection tool — not therapy, diagnosis, or an emergency
-          service.
-        </p>
-      </footer>
     </main>
   );
 }

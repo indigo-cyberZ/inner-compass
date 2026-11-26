@@ -75,11 +75,6 @@ export default async function ThoughtRecordPage() {
           </p>
         </details>
 
-        <p className="mt-4 rounded-xl bg-surface-2 px-3 py-2 text-xs text-ink-soft">
-          Educational self-help, not therapy. If a thought involves harming
-          yourself or others, please reach out to a professional or a crisis line.
-          Verified further-reading resources will live in the Learn section.
-        </p>
       </section>
 
       <ThoughtRecord />

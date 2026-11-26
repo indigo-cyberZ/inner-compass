@@ -81,8 +81,7 @@ export default async function BoundariesPage() {
           Boundaries depend on context, safety, relationships, and mutual
           agreements. One difficult interaction doesn&apos;t make someone a bad
           person — this is for understanding your own needs, not diagnosing
-          others. If you feel unsafe, your safety comes first; please reach out
-          to someone you trust or a professional.
+          others.
         </p>
       </section>
 
